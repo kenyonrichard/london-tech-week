@@ -48,6 +48,15 @@ nav {
   font-weight: 700;
   color: #e6f1ff;
   letter-spacing: 1px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.monogram {
+  width: 34px;
+  height: 34px;
+  flex-shrink: 0;
 }
 
 .logo span {
@@ -70,9 +79,6 @@ nav {
 
 .nav-links a.main-link {
   color: #b8d4e8;
-}
-
-.nav-links a.main-link {
   font-weight: 700;
 }
 
@@ -353,12 +359,12 @@ a.card {
 
 .carousel-dots {
   position: absolute;
-  bottom: 10px;
+  bottom: 42px;
   left: 50%;
   transform: translateX(-50%);
   display: flex;
   gap: 6px;
-  z-index: 2;
+  z-index: 3;
 }
 
 .carousel-dot {
@@ -806,6 +812,39 @@ footer .footer-links a {
 
 .lightbox-close:hover {
   background: rgba(255, 255, 255, 0.15);
+}
+
+.lightbox-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(10, 25, 47, 0.75);
+  color: #e6f1ff;
+  border: 1px solid #4891c3;
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  font-size: 1.4rem;
+  cursor: pointer;
+  z-index: 10000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s;
+  line-height: 1;
+  padding: 0;
+}
+
+.lightbox-nav:hover {
+  background: rgba(10, 25, 47, 0.95);
+}
+
+.lightbox-nav.prev {
+  left: 24px;
+}
+
+.lightbox-nav.next {
+  right: 24px;
 }
 
 

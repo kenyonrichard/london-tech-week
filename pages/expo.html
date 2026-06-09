@@ -11,7 +11,7 @@
             <div class="container">
                 <nav>
                     <a href="../index.html" class="logo"
-                        >Richard Kenyon <span>LTW:2026</span></a
+                        ><img src="../monogram.svg" alt="" class="monogram" />Richard Kenyon <span>LTW:2026</span></a
                     >
                     <ul class="nav-links">
                         <li><a href="../index.html">Home</a></li>
@@ -62,15 +62,15 @@
                         >
                             &#9664;
                         </button>
-                        <div class="carousel-slide active" onclick="openLightbox('../images/expo-colourful-booths.jpg')">
+                        <div class="carousel-slide active" onclick="openLightbox(this)">
                             <img src="../images/expo-colourful-booths.jpg" alt="Startup Village — Exhibition Hall A" loading="lazy" />
                             <span class="carousel-caption">Startup Village — Exhibition Hall A</span>
                         </div>
-                        <div class="carousel-slide" onclick="openLightbox('../images/expo-television.jpg')">
+                        <div class="carousel-slide" onclick="openLightbox(this)">
                             <img src="../images/expo-television.jpg" alt="Colourful Exhibition Booths" loading="lazy" />
                             <span class="carousel-caption">Colourful Exhibition Booths</span>
                         </div>
-                        <div class="carousel-slide" onclick="openLightbox('../images/expo-small-booths.jpg')">
+                        <div class="carousel-slide" onclick="openLightbox(this)">
                             <img src="../images/expo-small-booths.jpg" alt="Small Business Zone" loading="lazy" />
                             <span class="carousel-caption">Small Business Zone</span>
                         </div>
@@ -146,15 +146,15 @@
                         >
                             &#9664;
                         </button>
-                        <div class="carousel-slide active" onclick="openLightbox('../images/expo-television.jpg')">
+                        <div class="carousel-slide active" onclick="openLightbox(this)">
                             <img src="../images/expo-television.jpg" alt="AMD Pavilion — AI Compute Demos" loading="lazy" />
                             <span class="carousel-caption">AMD Pavilion — AI Compute Demos</span>
                         </div>
-                        <div class="carousel-slide" onclick="openLightbox('../images/expo-colourful-booths.jpg')">
+                        <div class="carousel-slide" onclick="openLightbox(this)">
                             <img src="../images/expo-colourful-booths.jpg" alt="Corporate Pavilion Displays" loading="lazy" />
                             <span class="carousel-caption">Corporate Pavilion Displays</span>
                         </div>
-                        <div class="carousel-slide" onclick="openLightbox('../images/expo-small-booths.jpg')">
+                        <div class="carousel-slide" onclick="openLightbox(this)">
                             <img src="../images/expo-small-booths.jpg" alt="Technology Showcase Area" loading="lazy" />
                             <span class="carousel-caption">Technology Showcase Area</span>
                         </div>
@@ -231,10 +231,31 @@
                 });
             });
 
-            function openLightbox(src) {
-                document.getElementById('lightbox-img').src = src;
+            function openLightbox(slideEl) {
+                var el = slideEl.closest ? slideEl.closest('.img-placeholder.carousel') : null;
+                if (!el) {
+                    window._lbImages = [slideEl.querySelector('img').src];
+                    window._lbIndex = 0;
+                    updateLightbox();
+                    return;
+                }
+                var slides = el.querySelectorAll('.carousel-slide');
+                window._lbImages = Array.from(slides).map(function (s) {
+                    return s.querySelector('img').src;
+                });
+                window._lbIndex = Array.from(slides).indexOf(slideEl);
+                updateLightbox();
+            }
+
+            function updateLightbox() {
+                document.getElementById('lightbox-img').src = window._lbImages[window._lbIndex];
                 document.getElementById('lightbox').classList.add('open');
                 document.body.style.overflow = 'hidden';
+            }
+
+            function lightboxNav(dir) {
+                window._lbIndex = (window._lbIndex + dir + window._lbImages.length) % window._lbImages.length;
+                updateLightbox();
             }
 
             function closeLightbox(e) {
@@ -248,10 +269,20 @@
                     var lb = document.getElementById('lightbox');
                     if (lb.classList.contains('open')) closeLightbox();
                 }
+                if (e.key === 'ArrowLeft') {
+                    var lb = document.getElementById('lightbox');
+                    if (lb.classList.contains('open') && window._lbImages) lightboxNav(-1);
+                }
+                if (e.key === 'ArrowRight') {
+                    var lb = document.getElementById('lightbox');
+                    if (lb.classList.contains('open') && window._lbImages) lightboxNav(1);
+                }
             });
         </script>
         <div class="lightbox" id="lightbox" onclick="closeLightbox(event)">
             <button class="lightbox-close" onclick="closeLightbox()">&times;</button>
+            <button class="lightbox-nav prev" onclick="lightboxNav(-1)">&#9664;</button>
+            <button class="lightbox-nav next" onclick="lightboxNav(1)">&#9654;</button>
             <img id="lightbox-img" src="" alt="" />
         </div>
     </body>
