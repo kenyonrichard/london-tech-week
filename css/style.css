@@ -275,7 +275,7 @@ a.card {
   width: 100%;
   height: 220px;
   background: linear-gradient(135deg, #0d2137 0%, #1e3a5f 100%);
-  border: 2px dashed #1e6a9e;
+  border: 2px solid #1e6a9e;
   border-radius: 12px;
   display: flex;
   flex-direction: column;
@@ -303,16 +303,16 @@ a.card {
 
 .carousel-slide {
   display: none;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  position: relative;
   width: 100%;
   height: 100%;
-  gap: 8px;
+  cursor: pointer;
+  overflow: hidden;
+  border-radius: 12px;
 }
 
 .carousel-slide.active {
-  display: flex;
+  display: block;
 }
 
 .carousel-btn {
@@ -740,3 +740,72 @@ footer .footer-links a {
     grid-template-columns: repeat(2, 1fr);
   }
 }
+
+/* Carousel Slide Images */
+.carousel-slide img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  border-radius: 12px;
+}
+
+.carousel-slide .carousel-caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 8px 12px;
+  background: rgba(10, 25, 47, 0.8);
+  color: #e6f1ff;
+  font-size: 0.85rem;
+  text-align: center;
+  z-index: 1;
+}
+
+/* Lightbox */
+.lightbox {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  background-color: rgba(0, 0, 0, 0.9);
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.lightbox.open {
+  display: flex;
+}
+
+.lightbox img {
+  max-width: 90vw;
+  max-height: 90vh;
+  object-fit: contain;
+  border-radius: 4px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+}
+
+.lightbox-close {
+  position: absolute;
+  top: 16px;
+  right: 24px;
+  background: none;
+  border: none;
+  color: #e6f1ff;
+  font-size: 2.4rem;
+  cursor: pointer;
+  line-height: 1;
+  padding: 4px 8px;
+  border-radius: 4px;
+  transition: background 0.2s;
+}
+
+.lightbox-close:hover {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+

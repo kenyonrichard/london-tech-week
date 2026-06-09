@@ -1,184 +1,258 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Expo — London Tech Week 2026</title>
-  <link rel="stylesheet" href="../css/style.css">
-</head>
-<body>
-  <header>
-    <div class="container">
-      <nav>
-        <a href="../index.html" class="logo">Richard Kenyon <span>LTW:2026</span></a>
-        <ul class="nav-links">
-          <li><a href="../index.html">Home</a></li>
-          <li><a href="conference.html" class="main-link">Conference</a></li>
-          <li><a href="expo.html" class="main-link active">Expo</a></li>
-          <li><a href="fringe.html" class="main-link">Fringe Events</a></li>
-          <li><a href="event.html">Event</a></li>
-          <li><a href="vip.html">VIP</a></li>
-          <li><a href="media.html">Media</a></li>
-          <li><a href="about.html">About</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Expo — London Tech Week 2026</title>
+        <link rel="stylesheet" href="../css/style.css" />
+    </head>
+    <body>
+        <header>
+            <div class="container">
+                <nav>
+                    <a href="../index.html" class="logo"
+                        >Richard Kenyon <span>LTW:2026</span></a
+                    >
+                    <ul class="nav-links">
+                        <li><a href="../index.html">Home</a></li>
+                        <li>
+                            <a href="conference.html" class="main-link"
+                                >Conference</a
+                            >
+                        </li>
+                        <li>
+                            <a href="expo.html" class="main-link active"
+                                >Expo</a
+                            >
+                        </li>
+                        <li>
+                            <a href="fringe.html" class="main-link"
+                                >Fringe Events</a
+                            >
+                        </li>
+                        <li><a href="event.html">Event</a></li>
+                        <li><a href="vip.html">VIP</a></li>
+                        <li><a href="media.html">Media</a></li>
+                        <li><a href="about.html">About</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
 
-  <section class="page-header">
-    <div class="container">
-      <h1>Exhibition & Expo Floor</h1>
-      <p>7 stages, 250+ exhibitors, and live demo areas across AI, quantum, climate, fintech, and space tech.</p>
-    </div>
-  </section>
+        <section class="page-header">
+            <div class="container">
+                <h1>Exhibition & Expo Floor</h1>
+                <p>
+                    7 stages, 250+ exhibitors, and live demo areas across AI,
+                    quantum, climate, fintech, and space tech.
+                </p>
+            </div>
+        </section>
 
-  <section>
-    <div class="container">
-      <div class="two-col">
-        <div class="img-placeholder large">
-          <div class="icon">&#9654;</div>
-          <span>Startup Village — Exhibition Hall A</span>
-        </div>
-        <div>
-          <h2 class="section-title">Startup Village</h2>
-          <p class="section-subtitle">250+ early-stage companies showcasing cutting-edge solutions</p>
-          <div class="content-prose">
-            <p>The expo floor was anchored by the Startup Village, a dedicated hall featuring hundreds of early-stage companies from across Europe and beyond. Each startup had a compact booth with live demonstrations, making it easy to cycle through many companies in a single session.</p>
-            <p>We conducted structured 30-minute meetings with 25 selected startups across AI, quantum, climate tech, fintech, and life sciences. Detailed profiles and evaluation scores are available in the full report.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+        <section>
+            <div class="container">
+                <div class="two-col">
+                    <div
+                        class="img-placeholder large carousel"
+                        id="expo-startup"
+                    >
+                        <button
+                            class="carousel-btn prev"
+                            onclick="slideTo('expo-startup', -1)"
+                        >
+                            &#9664;
+                        </button>
+                        <div class="carousel-slide active" onclick="openLightbox('../images/expo-colourful-booths.jpg')">
+                            <img src="../images/expo-colourful-booths.jpg" alt="Startup Village — Exhibition Hall A" loading="lazy" />
+                            <span class="carousel-caption">Startup Village — Exhibition Hall A</span>
+                        </div>
+                        <div class="carousel-slide" onclick="openLightbox('../images/expo-television.jpg')">
+                            <img src="../images/expo-television.jpg" alt="Colourful Exhibition Booths" loading="lazy" />
+                            <span class="carousel-caption">Colourful Exhibition Booths</span>
+                        </div>
+                        <div class="carousel-slide" onclick="openLightbox('../images/expo-small-booths.jpg')">
+                            <img src="../images/expo-small-booths.jpg" alt="Small Business Zone" loading="lazy" />
+                            <span class="carousel-caption">Small Business Zone</span>
+                        </div>
+                        <button
+                            class="carousel-btn next"
+                            onclick="slideTo('expo-startup', 1)"
+                        >
+                            &#9654;
+                        </button>
+                        <div class="carousel-dots"></div>
+                    </div>
+                    <div>
+                        <h2 class="section-title">Startup Village</h2>
+                        <p class="section-subtitle">
+                            250+ early-stage companies showcasing cutting-edge
+                            solutions
+                        </p>
+                        <div class="content-prose">
+                            <p>
+                                The expo floor was anchored by the Startup
+                                Village, a dedicated hall featuring hundreds of
+                                early-stage companies from across Europe and
+                                beyond. Each startup had a compact booth with
+                                live demonstrations, making it easy to cycle
+                                through many companies in a single session.
+                            </p>
+                            <p>
+                                We conducted structured 30-minute meetings with
+                                25 selected startups across AI, quantum, climate
+                                tech, fintech, and life sciences. Detailed
+                                profiles and evaluation scores are available in
+                                the full report.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-  <section>
-    <div class="container">
-      <div class="two-col">
-        <div>
-          <h2 class="section-title">Corporate Pavilions</h2>
-          <p class="section-subtitle">AMD, Microsoft, AWS, Dell, and more</p>
-          <div class="content-prose">
-            <p>Major tech companies mounted impressive pavilions showcasing their latest platforms and partnerships. AMD demonstrated next-generation AI compute infrastructure. Microsoft showcased Azure AI services and Copilot for regulated industries.</p>
-            <p>AWS highlighted their Amazon Braket quantum computing service, Dell ran a McLaren Racing AI session, and ServiceNow demonstrated agentic AI for enterprise workflows. HubSpot and IFS also had prominent presences on the expo floor.</p>
-          </div>
-        </div>
-        <div class="img-placeholder large">
-          <div class="icon">&#9654;</div>
-          <span>AMD Pavilion — AI Compute Demos</span>
-        </div>
-      </div>
-    </div>
-  </section>
+        <section>
+            <div class="container">
+                <div class="two-col">
+                    <div>
+                        <h2 class="section-title">Corporate Pavilions</h2>
+                        <p class="section-subtitle">
+                            AMD, Microsoft, AWS, Dell, and more
+                        </p>
+                        <div class="content-prose">
+                            <p>
+                                Major tech companies mounted impressive
+                                pavilions showcasing their latest platforms and
+                                partnerships. AMD demonstrated next-generation
+                                AI compute infrastructure. Microsoft showcased
+                                Azure AI services and Copilot for regulated
+                                industries.
+                            </p>
+                            <p>
+                                AWS highlighted their Amazon Braket quantum
+                                computing service, Dell ran a McLaren Racing AI
+                                session, and ServiceNow demonstrated agentic AI
+                                for enterprise workflows. HubSpot and IFS also
+                                had prominent presences on the expo floor.
+                            </p>
+                        </div>
+                    </div>
+                    <div
+                        class="img-placeholder large carousel"
+                        id="expo-pavilions"
+                    >
+                        <button
+                            class="carousel-btn prev"
+                            onclick="slideTo('expo-pavilions', -1)"
+                        >
+                            &#9664;
+                        </button>
+                        <div class="carousel-slide active" onclick="openLightbox('../images/expo-television.jpg')">
+                            <img src="../images/expo-television.jpg" alt="AMD Pavilion — AI Compute Demos" loading="lazy" />
+                            <span class="carousel-caption">AMD Pavilion — AI Compute Demos</span>
+                        </div>
+                        <div class="carousel-slide" onclick="openLightbox('../images/expo-colourful-booths.jpg')">
+                            <img src="../images/expo-colourful-booths.jpg" alt="Corporate Pavilion Displays" loading="lazy" />
+                            <span class="carousel-caption">Corporate Pavilion Displays</span>
+                        </div>
+                        <div class="carousel-slide" onclick="openLightbox('../images/expo-small-booths.jpg')">
+                            <img src="../images/expo-small-booths.jpg" alt="Technology Showcase Area" loading="lazy" />
+                            <span class="carousel-caption">Technology Showcase Area</span>
+                        </div>
+                        <button
+                            class="carousel-btn next"
+                            onclick="slideTo('expo-pavilions', 1)"
+                        >
+                            &#9654;
+                        </button>
+                        <div class="carousel-dots"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-  <section>
-    <div class="container">
-      <h2 class="section-title">Startups Met</h2>
-      <p class="section-subtitle">Selected companies from our 25 structured meetings.</p>
-      <div class="card-grid">
-        <div class="card">
-          <div class="card-image">
-            <svg viewBox="0 0 24 24" width="48" height="48" fill="#4891c3"><path d="M12 2L2 7v10l10 5 10-5V7l-10-5zM4 9.5l8 4 8-4v1.5l-8 4-8-4V9.5zm8-2.5l-6.5 3.25L12 13l6.5-3.25L12 7zm-8 6.5l8 4 8-4V17l-8 4-8-4v-3.5z"/></svg>
-          </div>
-          <div class="card-content">
-            <span class="card-tag">Climate Tech</span>
-            <h3>GridOak Energy</h3>
-            <p>Iron-air grid storage batteries at 40% lower cost than lithium-ion. Pilot-ready for industrial-scale deployment.</p>
-          </div>
-        </div>
-        <div class="card">
-          <div class="card-image">
-            <svg viewBox="0 0 24 24" width="48" height="48" fill="#4891c3"><path d="M12 2L2 7v10l10 5 10-5V7l-10-5zM4 9.5l8 4 8-4v1.5l-8 4-8-4V9.5zm8-2.5l-6.5 3.25L12 13l6.5-3.25L12 7zm-8 6.5l8 4 8-4V17l-8 4-8-4v-3.5z"/></svg>
-          </div>
-          <div class="card-content">
-            <span class="card-tag">AI</span>
-            <h3>Vertex AI Systems</h3>
-            <p>Agentic AI platform for automated document processing and compliance workflows. Used by three of the Big Four accounting firms.</p>
-          </div>
-        </div>
-        <div class="card">
-          <div class="card-image">
-            <svg viewBox="0 0 24 24" width="48" height="48" fill="#4891c3"><path d="M12 2L2 7v10l10 5 10-5V7l-10-5zM4 9.5l8 4 8-4v1.5l-8 4-8-4V9.5zm8-2.5l-6.5 3.25L12 13l6.5-3.25L12 7zm-8 6.5l8 4 8-4V17l-8 4-8-4v-3.5z"/></svg>
-          </div>
-          <div class="card-content">
-            <span class="card-tag">Fintech</span>
-            <h3>PayFlow</h3>
-            <p>Real-time cross-border payment infrastructure for SMEs. Uses stablecoin settlement to reduce fees by 80% versus traditional wire transfers.</p>
-          </div>
-        </div>
-        <div class="card">
-          <div class="card-image">
-            <svg viewBox="0 0 24 24" width="48" height="48" fill="#4891c3"><path d="M12 2L2 7v10l10 5 10-5V7l-10-5zM4 9.5l8 4 8-4v1.5l-8 4-8-4V9.5zm8-2.5l-6.5 3.25L12 13l6.5-3.25L12 7zm-8 6.5l8 4 8-4V17l-8 4-8-4v-3.5z"/></svg>
-          </div>
-          <div class="card-content">
-            <span class="card-tag">Deep Science</span>
-            <h3>Quantum Dot Labs</h3>
-            <p>Room-temperature quantum dot sensors for medical imaging. 10x resolution improvement over current MRI contrast agents.</p>
-          </div>
-        </div>
-        <div class="card">
-          <div class="card-image">
-            <svg viewBox="0 0 24 24" width="48" height="48" fill="#4891c3"><path d="M12 2L2 7v10l10 5 10-5V7l-10-5zM4 9.5l8 4 8-4v1.5l-8 4-8-4V9.5zm8-2.5l-6.5 3.25L12 13l6.5-3.25L12 7zm-8 6.5l8 4 8-4V17l-8 4-8-4v-3.5z"/></svg>
-          </div>
-          <div class="card-content">
-            <span class="card-tag">Climate Tech</span>
-            <h3>Carbix Systems</h3>
-            <p>Modular direct air capture units. 60% lower energy consumption than incumbent solutions. Targeting carbon credits market.</p>
-          </div>
-        </div>
-        <div class="card">
-          <div class="card-image">
-            <svg viewBox="0 0 24 24" width="48" height="48" fill="#4891c3"><path d="M12 2L2 7v10l10 5 10-5V7l-10-5zM4 9.5l8 4 8-4v1.5l-8 4-8-4V9.5zm8-2.5l-6.5 3.25L12 13l6.5-3.25L12 7zm-8 6.5l8 4 8-4V17l-8 4-8-4v-3.5z"/></svg>
-          </div>
-          <div class="card-content">
-            <span class="card-tag">AI</span>
-            <h3>Synthia Health</h3>
-            <p>AI-powered drug discovery platform combining reinforcement learning with automated lab experimentation. Reduced screening timelines by 75%.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+        <footer>
+            <div class="container">
+                <div class="footer-links">
+                    <a href="../index.html">Home</a>
+                    <a href="conference.html">Conference</a>
+                    <a href="expo.html">Expo</a>
+                    <a href="fringe.html">Fringe Events</a>
+                    <a href="event.html">Event</a>
+                    <a href="vip.html">VIP</a>
+                    <a href="media.html">Media</a>
+                    <a href="about.html">About</a>
+                </div>
+                <p>London Tech Week 2026 - Fact-Finding Report</p>
+                <p>
+                    <em>Prepared by Richard Kenyon.</em><br />All content,
+                    images and video are my own work, unless an external source
+                    is cited.
+                </p>
+            </div>
+        </footer>
+        <script>
+            function slideTo(id, dir) {
+                var el = document.getElementById(id);
+                var slides = el.querySelectorAll(".carousel-slide");
+                var dots = el.querySelector(".carousel-dots");
+                var idx = Array.from(slides).findIndex(function (s) {
+                    return s.classList.contains("active");
+                });
+                slides[idx].classList.remove("active");
+                if (dots) dots.children[idx].classList.remove("active");
+                idx = (idx + dir + slides.length) % slides.length;
+                slides[idx].classList.add("active");
+                if (dots) dots.children[idx].classList.add("active");
+            }
 
-  <section>
-    <div class="container">
-      <h2 class="section-title">Live Demo Areas</h2>
-      <p class="section-subtitle">Hands-on experiences and technology showcases.</p>
-      <div class="stats-grid">
-        <div class="stat-card">
-          <div class="stat-number">200+</div>
-          <div class="stat-label">Startup Booths</div>
-        </div>
-        <div class="stat-card">
-          <div class="stat-number">25</div>
-          <div class="stat-label">Structured Meetings</div>
-        </div>
-        <div class="stat-card">
-          <div class="stat-number">12</div>
-          <div class="stat-label">Corporate Pavilions</div>
-        </div>
-        <div class="stat-card">
-          <div class="stat-number">6</div>
-          <div class="stat-label">Live Demo Stages</div>
-        </div>
-      </div>
-    </div>
-  </section>
+            document.addEventListener("DOMContentLoaded", function () {
+                var carousels = document.querySelectorAll(
+                    ".img-placeholder.carousel",
+                );
+                carousels.forEach(function (el) {
+                    var slides = el.querySelectorAll(".carousel-slide");
+                    var dots = el.querySelector(".carousel-dots");
+                    if (!dots || slides.length < 2) return;
+                    slides.forEach(function (_, i) {
+                        var dot = document.createElement("button");
+                        dot.className =
+                            "carousel-dot" + (i === 0 ? " active" : "");
+                        dot.onclick = function () {
+                            var active = dots.querySelector(".active");
+                            if (active) active.classList.remove("active");
+                            slides.forEach(function (s) {
+                                s.classList.remove("active");
+                            });
+                            slides[i].classList.add("active");
+                            dot.classList.add("active");
+                        };
+                        dots.appendChild(dot);
+                    });
+                });
+            });
 
-  <footer>
-    <div class="container">
-      <div class="footer-links">
-        <a href="../index.html">Home</a>
-        <a href="conference.html">Conference</a>
-        <a href="expo.html">Expo</a>
-        <a href="fringe.html">Fringe Events</a>
-        <a href="event.html">Event</a>
-        <a href="vip.html">VIP</a>
-        <a href="media.html">Media</a>
-        <a href="about.html">About</a>
-      </div>
-      <p>London Tech Week 2026 - Fact-Finding Report</p>
-      <p>Prepared by Richard Kenyon, Head of Technology at Bolton Council</p>
-    </div>
-  </footer>
-</body>
+            function openLightbox(src) {
+                document.getElementById('lightbox-img').src = src;
+                document.getElementById('lightbox').classList.add('open');
+                document.body.style.overflow = 'hidden';
+            }
+
+            function closeLightbox(e) {
+                if (e && e.target !== e.currentTarget && e.target.tagName !== 'IMG') return;
+                document.getElementById('lightbox').classList.remove('open');
+                document.body.style.overflow = '';
+            }
+
+            document.addEventListener('keydown', function (e) {
+                if (e.key === 'Escape') {
+                    var lb = document.getElementById('lightbox');
+                    if (lb.classList.contains('open')) closeLightbox();
+                }
+            });
+        </script>
+        <div class="lightbox" id="lightbox" onclick="closeLightbox(event)">
+            <button class="lightbox-close" onclick="closeLightbox()">&times;</button>
+            <img id="lightbox-img" src="" alt="" />
+        </div>
+    </body>
 </html>
