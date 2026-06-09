@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Conference — London Tech Week 2026</title>
+        <title>Conference - London Tech Week 2026</title>
         <link rel="stylesheet" href="../css/style.css" />
     </head>
     <body>
@@ -11,7 +11,7 @@
             <div class="container">
                 <nav>
                     <a href="../index.html" class="logo"
-                        >Richard <span>Kenyon</span></a
+                        >Richard Kenyon <span>LTW:2026</span></a
                     >
                     <ul class="nav-links">
                         <li><a href="../index.html">Home</a></li>
@@ -21,8 +21,13 @@
                             >
                         </li>
                         <li><a href="expo.html" class="main-link">Expo</a></li>
-                        <li><a href="fringe.html" class="main-link">Fringe Events</a></li>
+                        <li>
+                            <a href="fringe.html" class="main-link"
+                                >Fringe Events</a
+                            >
+                        </li>
                         <li><a href="event.html">Event</a></li>
+                        <li><a href="vip.html">VIP</a></li>
                         <li><a href="media.html">Media</a></li>
                         <li><a href="about.html">About</a></li>
                     </ul>
@@ -35,7 +40,7 @@
                 <h1>Conference Programme</h1>
                 <p>
                     Keynotes, breakout sessions, and deep-dive tracks across 7
-                    stages — AI Arena, Core Stage, Transformation, Founders,
+                    stages - AI Arena, Core Stage, Transformation, Founders,
                     Deep Tech, Ignition, and EQL:Lounge.
                 </p>
             </div>
@@ -77,9 +82,35 @@
                             </p>
                         </div>
                     </div>
-                    <div class="img-placeholder large">
-                        <div class="icon">&#9654;</div>
-                        <span>AI Arena — Main Auditorium</span>
+                    <div
+                        class="img-placeholder large carousel"
+                        id="day1-carousel"
+                    >
+                        <button
+                            class="carousel-btn prev"
+                            onclick="slideTo('day1-carousel', -1)"
+                        >
+                            &#9664;
+                        </button>
+                        <div class="carousel-slide active">
+                            <div class="icon">&#9654;</div>
+                            <span>AI Arena — Main Auditorium</span>
+                        </div>
+                        <div class="carousel-slide">
+                            <div class="icon">&#9654;</div>
+                            <span>Dr. Lisa Su — AMD Keynote Stage</span>
+                        </div>
+                        <div class="carousel-slide">
+                            <div class="icon">&#9654;</div>
+                            <span>Sir Sadiq Khan — Fireside Chat</span>
+                        </div>
+                        <button
+                            class="carousel-btn next"
+                            onclick="slideTo('day1-carousel', 1)"
+                        >
+                            &#9654;
+                        </button>
+                        <div class="carousel-dots"></div>
                     </div>
                 </div>
             </div>
@@ -284,12 +315,57 @@
                     <a href="expo.html">Expo</a>
                     <a href="fringe.html">Fringe Events</a>
                     <a href="event.html">Event</a>
+                    <a href="vip.html">VIP</a>
                     <a href="media.html">Media</a>
                     <a href="about.html">About</a>
                 </div>
                 <p>London Tech Week 2026 - Fact-Finding Report</p>
-                <p>Prepared by Richard Kenyon, Head of Technology at Bolton Council</p>
+                <p>
+                    Prepared by Richard Kenyon, Head of Technology at Bolton
+                    Council
+                </p>
             </div>
         </footer>
+        <script>
+            function slideTo(id, dir) {
+                var el = document.getElementById(id);
+                var slides = el.querySelectorAll(".carousel-slide");
+                var dots = el.querySelector(".carousel-dots");
+                var idx = Array.from(slides).findIndex(function (s) {
+                    return s.classList.contains("active");
+                });
+                slides[idx].classList.remove("active");
+                if (dots) dots.children[idx].classList.remove("active");
+                idx = (idx + dir + slides.length) % slides.length;
+                slides[idx].classList.add("active");
+                if (dots) dots.children[idx].classList.add("active");
+            }
+
+            document.addEventListener("DOMContentLoaded", function () {
+                var carousels = document.querySelectorAll(
+                    ".img-placeholder.carousel",
+                );
+                carousels.forEach(function (el) {
+                    var slides = el.querySelectorAll(".carousel-slide");
+                    var dots = el.querySelector(".carousel-dots");
+                    if (!dots || slides.length < 2) return;
+                    slides.forEach(function (_, i) {
+                        var dot = document.createElement("button");
+                        dot.className =
+                            "carousel-dot" + (i === 0 ? " active" : "");
+                        dot.onclick = function () {
+                            var active = dots.querySelector(".active");
+                            if (active) active.classList.remove("active");
+                            slides.forEach(function (s) {
+                                s.classList.remove("active");
+                            });
+                            slides[i].classList.add("active");
+                            dot.classList.add("active");
+                        };
+                        dots.appendChild(dot);
+                    });
+                });
+            });
+        </script>
     </body>
 </html>
