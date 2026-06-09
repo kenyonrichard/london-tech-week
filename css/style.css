@@ -61,11 +61,19 @@ nav {
 }
 
 .nav-links a {
-  color: #b8d4e8;
+  color: #e6f1ff;
   font-weight: 500;
   font-size: 0.95rem;
   padding-bottom: 4px;
   border-bottom: 2px solid transparent;
+}
+
+.nav-links a.main-link {
+  color: #b8d4e8;
+}
+
+.nav-links a.main-link {
+  font-weight: 700;
 }
 
 .nav-links a:hover,
