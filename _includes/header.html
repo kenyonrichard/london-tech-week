@@ -1,0 +1,33 @@
+<header>
+    <div class="container">
+        <nav>
+            <a href="{{ include.root }}index.html" class="logo"
+                ><img src="{{ include.root }}images/monogram.svg" alt="" class="monogram" />Richard Kenyon <span>LTW:2026</span></a
+            >
+            <ul class="nav-links">
+                <li><a href="{{ include.root }}index.html"{% if include.active == 'home' %} class="active"{% endif %}>Home</a></li>
+                <li>
+                    <a href="{% if include.root == "" %}pages/{% endif %}conference.html" class="main-link{% if include.active == 'conference' %} active{% endif %}"
+                        >Conference</a
+                    >
+                </li>
+                <li><a href="{% if include.root == "" %}pages/{% endif %}expo.html" class="main-link{% if include.active == 'expo' %} active{% endif %}">Expo</a></li>
+                <li>
+                    <a href="{% if include.root == "" %}pages/{% endif %}fringe.html" class="main-link{% if include.active == 'fringe' %} active{% endif %}"
+                        >Fringe Events</a
+                    >
+                </li>
+                <li class="nav-dropdown">
+                    <a href="#" class="nav-dropdown-toggle">More <span class="arrow-down">&#9660;</span></a>
+                    <ul class="nav-dropdown-menu">
+                        <li><a href="{% if include.root == "" %}pages/{% endif %}event.html"{% if include.active == 'event' %} class="active"{% endif %}>Event</a></li>
+                        <li><a href="{% if include.root == "" %}pages/{% endif %}vip.html"{% if include.active == 'vip' %} class="active"{% endif %}>VIP</a></li>
+                        <li><a href="{% if include.root == "" %}pages/{% endif %}media.html"{% if include.active == 'media' %} class="active"{% endif %}>Media</a></li>
+                        <li><a href="{% if include.root == "" %}pages/{% endif %}gallery.html"{% if include.active == 'gallery' %} class="active"{% endif %}>Gallery</a></li>
+                        <li><a href="{% if include.root == "" %}pages/{% endif %}about.html"{% if include.active == 'about' %} class="active"{% endif %}>About</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</header>

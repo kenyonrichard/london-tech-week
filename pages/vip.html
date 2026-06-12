@@ -1,3 +1,5 @@
+---
+---
 <!doctype html>
 <html lang="en">
     <head>
@@ -7,33 +9,7 @@
         <link rel="stylesheet" href="../css/style.css" />
     </head>
     <body>
-        <header>
-            <div class="container">
-                <nav>
-                    <a href="../index.html" class="logo"
-                        ><img src="../images/monogram.svg" alt="" class="monogram" />Richard Kenyon <span>LTW:2026</span></a
-                    >
-                    <ul class="nav-links">
-                        <li><a href="../index.html">Home</a></li>
-                        <li>
-                            <a href="conference.html" class="main-link"
-                                >Conference</a
-                            >
-                        </li>
-                        <li><a href="expo.html" class="main-link">Expo</a></li>
-                        <li>
-                            <a href="fringe.html" class="main-link"
-                                >Fringe Events</a
-                            >
-                        </li>
-                        <li><a href="event.html">Event</a></li>
-                        <li><a href="vip.html" class="active">VIP</a></li>
-                        <li><a href="media.html">Media</a></li>
-                        <li><a href="about.html">About</a></li>
-                    </ul>
-                </nav>
-            </div>
-        </header>
+{% include header.html root="../" active="vip" %}
 
         <section class="page-header">
             <div class="container">
@@ -148,21 +124,6 @@
             </div>
         </section>
 
-        <footer>
-            <div class="container">
-                <div class="footer-links">
-                    <a href="../index.html">Home</a>
-                    <a href="conference.html">Conference</a>
-                    <a href="expo.html">Expo</a>
-                    <a href="fringe.html">Fringe Events</a>
-                    <a href="event.html">Event</a>
-                    <a href="vip.html">VIP</a>
-                    <a href="media.html">Media</a>
-                    <a href="about.html">About</a>
-                </div>
-                <p>London Tech Week 2026 - Fact-Finding Report</p>
-                <p><em>Prepared by Richard Kenyon.</em><br />All content, images and video are my own work, unless an external source is cited.</p>
-            </div>
-        </footer>
+{% include footer.html root="../" %}
     </body>
 </html>
