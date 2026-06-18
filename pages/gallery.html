@@ -6,6 +6,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Gallery — London Tech Week 2026</title>
+  <link rel="icon" href="../monogram.ico" type="image/x-icon">
   <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
@@ -20,22 +21,132 @@
 
   <section>
     <div class="container">
-      <div class="two-col">
-        <div>
-          <h2 class="section-title">Event Photography</h2>
-          <p class="section-subtitle">Capturing the week's key moments</p>
-          <div class="content-prose">
-            <p>Images from across the conference, expo floor, fringe events, and networking sessions throughout London Tech Week 2026 at The Olympia.</p>
+      <div class="gallery-shell">
+        <div class="gallery-grid">
+          <div class="gallery-item" onclick="openLightbox(this)">
+            <img src="../images/areana-arrival.jpg" alt="areana-arrival.jpg" loading="lazy" />
+            <span class="gallery-caption">areana-arrival.jpg</span>
           </div>
-        </div>
-        <div class="img-placeholder large">
-          <div class="icon">&#9654;</div>
-          <span>Photo Gallery — Coming Soon</span>
+          <div class="gallery-item" onclick="openLightbox(this)">
+            <img src="../images/arena-chairperson.jpg" alt="arena-chairperson.jpg" loading="lazy" />
+            <span class="gallery-caption">arena-chairperson.jpg</span>
+          </div>
+          <div class="gallery-item" onclick="openLightbox(this)">
+            <img src="../images/expo-colourful-booths.jpg" alt="expo-colourful-booths.jpg" loading="lazy" />
+            <span class="gallery-caption">expo-colourful-booths.jpg</span>
+          </div>
+          <div class="gallery-item" onclick="openLightbox(this)">
+            <img src="../images/expo-small-booths.jpg" alt="expo-small-booths.jpg" loading="lazy" />
+            <span class="gallery-caption">expo-small-booths.jpg</span>
+          </div>
+          <div class="gallery-item" onclick="openLightbox(this)">
+            <img src="../images/expo-television.jpg" alt="expo-television.jpg" loading="lazy" />
+            <span class="gallery-caption">expo-television.jpg</span>
+          </div>
+          <div class="gallery-item" onclick="openLightbox(this)">
+            <img src="../images/keynote-microsoft.jpg" alt="keynote-microsoft.jpg" loading="lazy" />
+            <span class="gallery-caption">keynote-microsoft.jpg</span>
+          </div>
+          <div class="gallery-item" onclick="openLightbox(this)">
+            <img src="../images/keynote-microsoft2.jpg" alt="keynote-microsoft2.jpg" loading="lazy" />
+            <span class="gallery-caption">keynote-microsoft2.jpg</span>
+          </div>
+          <div class="gallery-item" onclick="openLightbox(this)">
+            <img src="../images/keynote-microsoft3.jpg" alt="keynote-microsoft3.jpg" loading="lazy" />
+            <span class="gallery-caption">keynote-microsoft3.jpg</span>
+          </div>
+          <div class="gallery-item" onclick="openLightbox(this)">
+            <img src="../images/keynote-pm-wide.jpg" alt="keynote-pm-wide.jpg" loading="lazy" />
+            <span class="gallery-caption">keynote-pm-wide.jpg</span>
+          </div>
+          <div class="gallery-item" onclick="openLightbox(this)">
+            <img src="../images/keynote-pm.jpg" alt="keynote-pm.jpg" loading="lazy" />
+            <span class="gallery-caption">keynote-pm.jpg</span>
+          </div>
+          <div class="gallery-item" onclick="openLightbox(this)">
+            <img src="../images/keynote-pm2.jpg" alt="keynote-pm2.jpg" loading="lazy" />
+            <span class="gallery-caption">keynote-pm2.jpg</span>
+          </div>
+          <div class="gallery-item" onclick="openLightbox(this)">
+            <img src="../images/panel-amd.jpg" alt="panel-amd.jpg" loading="lazy" />
+            <span class="gallery-caption">panel-amd.jpg</span>
+          </div>
+          <div class="gallery-item" onclick="openLightbox(this)">
+            <img src="../images/panel-amd2.jpg" alt="panel-amd2.jpg" loading="lazy" />
+            <span class="gallery-caption">panel-amd2.jpg</span>
+          </div>
+          <div class="gallery-item" onclick="openLightbox(this)">
+            <img src="../images/panel-mayor.jpg" alt="panel-mayor.jpg" loading="lazy" />
+            <span class="gallery-caption">panel-mayor.jpg</span>
+          </div>
+          <div class="gallery-item" onclick="openLightbox(this)">
+            <img src="../images/panel-mayor2.jpg" alt="panel-mayor2.jpg" loading="lazy" />
+            <span class="gallery-caption">panel-mayor2.jpg</span>
+          </div>
+          <div class="gallery-item" onclick="openLightbox(this)">
+            <img src="../images/panel-sovereign.jpg" alt="panel-sovereign.jpg" loading="lazy" />
+            <span class="gallery-caption">panel-sovereign.jpg</span>
+          </div>
+          <div class="gallery-item" onclick="openLightbox(this)">
+            <img src="../images/vip-village-food.jpg" alt="vip-village-food.jpg" loading="lazy" />
+            <span class="gallery-caption">vip-village-food.jpg</span>
+          </div>
+          <div class="gallery-item" onclick="openLightbox(this)">
+            <img src="../images/vip-village-seating.jpg" alt="vip-village-seating.jpg" loading="lazy" />
+            <span class="gallery-caption">vip-village-seating.jpg</span>
+          </div>
+          <div class="gallery-item" onclick="openLightbox(this)">
+            <img src="../images/vip-village-sign.jpg" alt="vip-village-sign.jpg" loading="lazy" />
+            <span class="gallery-caption">vip-village-sign.jpg</span>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
 {% include footer.html root="../" %}
+
+  <div class="lightbox" id="lightbox" onclick="closeLightbox(event)">
+    <button class="lightbox-close" onclick="closeLightbox(event)">&times;</button>
+    <button class="lightbox-nav prev" onclick="lightboxNav(-1)">&#9664;</button>
+    <button class="lightbox-nav next" onclick="lightboxNav(1)">&#9654;</button>
+    <img id="lightbox-img" src="" alt="Gallery image" />
+  </div>
+
+  <script>
+    function openLightbox(tile) {
+      var items = document.querySelectorAll(".gallery-item img");
+      window._lbImages = Array.from(items).map(function (img) {
+        return img.src;
+      });
+      window._lbIndex = Array.from(document.querySelectorAll(".gallery-item")).indexOf(tile);
+      updateLightbox();
+    }
+
+    function updateLightbox() {
+      document.getElementById("lightbox-img").src = window._lbImages[window._lbIndex];
+      document.getElementById("lightbox").classList.add("open");
+      document.body.style.overflow = "hidden";
+    }
+
+    function lightboxNav(dir) {
+      window._lbIndex = (window._lbIndex + dir + window._lbImages.length) % window._lbImages.length;
+      updateLightbox();
+    }
+
+    function closeLightbox(e) {
+      if (e && e.target !== e.currentTarget && e.target.tagName !== "IMG") return;
+      document.getElementById("lightbox").classList.remove("open");
+      document.body.style.overflow = "";
+    }
+
+    document.addEventListener("keydown", function (e) {
+      var lb = document.getElementById("lightbox");
+      if (!lb.classList.contains("open")) return;
+      if (e.key === "Escape") closeLightbox();
+      if (e.key === "ArrowLeft") lightboxNav(-1);
+      if (e.key === "ArrowRight") lightboxNav(1);
+    });
+  </script>
 </body>
 </html>
