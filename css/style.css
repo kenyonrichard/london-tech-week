@@ -619,6 +619,23 @@ footer .footer-links a {
   display: grid;
   grid-template-columns: repeat(5, minmax(0, 1fr));
   gap: 8px;
+  margin-bottom: 28px;
+}
+
+.gallery-heading {
+  font-size: 0.95rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: #7ab3d3;
+  margin: 0 0 10px;
+  padding-top: 6px;
+  border-top: 1px solid rgba(122, 179, 211, 0.25);
+}
+
+.gallery-shell > .gallery-heading:first-child {
+  padding-top: 0;
+  border-top: none;
 }
 
 .gallery-item {
