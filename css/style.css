@@ -28,15 +28,6 @@ a:hover {
 }
 
 /* Top red banner */
-.top-banner {
-  background: #c00;
-  color: #fff;
-  font-weight: 900;
-  text-align: center;
-  padding: 14px 24px;
-  font-size: 1.4rem;
-}
-
 /* Header & Navigation */
 header {
   background-color: #0d2137;
