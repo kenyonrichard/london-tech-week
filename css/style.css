@@ -536,7 +536,8 @@ footer p {
 footer .footer-links {
   display: flex;
   justify-content: center;
-  gap: 20px;
+  flex-wrap: wrap;
+  gap: 8px 20px;
   margin-bottom: 16px;
 }
 
@@ -1040,5 +1041,21 @@ footer .footer-links a {
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
+  }
+}
+
+/* Small screens */
+@media (max-width: 480px) {
+  .logo {
+    font-size: 1.15rem;
+    letter-spacing: 0.5px;
+  }
+
+  .hero h1 {
+    font-size: 1.7rem;
+  }
+
+  .page-header h1 {
+    font-size: 1.8rem;
   }
 }
