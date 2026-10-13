@@ -1,0 +1,8 @@
+# Set these to the live site address (used for canonical, social-preview and sitemap URLs).
+url: "https://kenyonrichard.github.io"
+baseurl: "/london-tech-week"
+title: "London Tech Week 2026 — Fact-Finding Report"
+author: "Richard Kenyon"
+exclude:
+  - _source
+  - _to_delete
