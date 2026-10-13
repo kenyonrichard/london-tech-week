@@ -1,19 +1,10 @@
 ---
+layout: default
+title: "About — London Tech Week 2026"
+description: "Context and methodology behind the mission."
+root: "../"
+active: "about"
 ---
-<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>About — London Tech Week 2026</title>
-  <link rel="stylesheet" href="../css/style.css">
-  <link rel="icon" type="image/x-icon" href="../favicon.ico" />
-  <link rel="icon" type="image/png" sizes="32x32" href="../images/favicon/favicon-32x32.png" />
-  <link rel="icon" type="image/png" sizes="16x16" href="../images/favicon/favicon-16x16.png" />
-  <link rel="apple-touch-icon" sizes="180x180" href="../images/favicon/apple-touch-icon.png" />
-</head>
-<body>
-{% include header.html root="../" active="about" %}
 
   <section class="page-header">
     <div class="container">
@@ -25,8 +16,8 @@
   <section>
     <div class="container">
       <div class="two-col">
-        <div class="img-placeholder large" style="padding:0;overflow:hidden;">
-          <img src="../images/expo-hall-size.jpg" alt="Expo Floor — Aerial View" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;" />
+        <div class="img-placeholder large card-image-flush">
+          <img class="img-cover" width="1600" height="1200" src="../images/web/expo-hall-size.jpg" alt="Expo Floor — Aerial View" loading="lazy" />
         </div>
         <div>
           <h2 class="section-title">Mission Brief</h2>
@@ -55,7 +46,3 @@
       </div>
     </div>
   </section>
-
-{% include footer.html root="../" %}
-</body>
-</html>
