@@ -7,24 +7,24 @@
             <ul class="nav-links">
                 <li><a href="{{ include.root }}index.html"{% if include.active == 'home' %} class="active"{% endif %}>Home</a></li>
                 <li>
-                    <a href="{% if include.root == "" %}pages/{% endif %}conference.html" class="main-link{% if include.active == 'conference' %} active{% endif %}"
+                    <a href="{{ include.root }}pages/conference.html" class="main-link{% if include.active == 'conference' %} active{% endif %}"
                         >Conference</a
                     >
                 </li>
-                <li><a href="{% if include.root == "" %}pages/{% endif %}expo.html" class="main-link{% if include.active == 'expo' %} active{% endif %}">Expo</a></li>
+                <li><a href="{{ include.root }}pages/expo.html" class="main-link{% if include.active == 'expo' %} active{% endif %}">Expo</a></li>
                 <li>
-                    <a href="{% if include.root == "" %}pages/{% endif %}fringe.html" class="main-link{% if include.active == 'fringe' %} active{% endif %}"
+                    <a href="{{ include.root }}pages/fringe.html" class="main-link{% if include.active == 'fringe' %} active{% endif %}"
                         >Fringe Events</a
                     >
                 </li>
                 <li class="nav-dropdown">
                     <a href="#" class="nav-dropdown-toggle" aria-haspopup="true" aria-expanded="false">More <span class="arrow-down">&#9660;</span></a>
                     <ul class="nav-dropdown-menu">
-                        <li><a href="{% if include.root == "" %}pages/{% endif %}event.html"{% if include.active == 'event' %} class="active"{% endif %}>Event</a></li>
-                        <li><a href="{% if include.root == "" %}pages/{% endif %}vip.html"{% if include.active == 'vip' %} class="active"{% endif %}>VIP</a></li>
-                        <li><a href="{% if include.root == "" %}pages/{% endif %}media.html"{% if include.active == 'media' %} class="active"{% endif %}>Media</a></li>
-                        <li><a href="{% if include.root == "" %}pages/{% endif %}gallery.html"{% if include.active == 'gallery' %} class="active"{% endif %}>Gallery</a></li>
-                        <li><a href="{% if include.root == "" %}pages/{% endif %}about.html"{% if include.active == 'about' %} class="active"{% endif %}>About</a></li>
+                        <li><a href="{{ include.root }}pages/event.html"{% if include.active == 'event' %} class="active"{% endif %}>Event</a></li>
+                        <li><a href="{{ include.root }}pages/vip.html"{% if include.active == 'vip' %} class="active"{% endif %}>VIP</a></li>
+                        <li><a href="{{ include.root }}pages/media.html"{% if include.active == 'media' %} class="active"{% endif %}>Media</a></li>
+                        <li><a href="{{ include.root }}pages/gallery.html"{% if include.active == 'gallery' %} class="active"{% endif %}>Gallery</a></li>
+                        <li><a href="{{ include.root }}pages/about.html"{% if include.active == 'about' %} class="active"{% endif %}>About</a></li>
                     </ul>
                 </li>
             </ul>
