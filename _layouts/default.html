@@ -15,12 +15,12 @@
         <meta property="og:image" content="{{ page.image | default: '/images/web/core-stage-in-session.jpg' | absolute_url }}" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="theme-color" content="#0a192f" />
-        <link rel="stylesheet" href="{{ page.root }}css/style.css" />
+        <link rel="stylesheet" href="{{ page.root }}css/style.css?v={{ site.time | date: '%s' }}" />
         <link rel="icon" type="image/x-icon" href="{{ page.root }}favicon.ico" />
         <link rel="icon" type="image/png" sizes="32x32" href="{{ page.root }}images/favicon/favicon-32x32.png" />
         <link rel="icon" type="image/png" sizes="16x16" href="{{ page.root }}images/favicon/favicon-16x16.png" />
         <link rel="apple-touch-icon" sizes="180x180" href="{{ page.root }}images/favicon/apple-touch-icon.png" />
-        <script src="{{ page.root }}js/site.js" defer></script>
+        <script src="{{ page.root }}js/site.js?v={{ site.time | date: '%s' }}" defer></script>
     </head>
     <body>
 {% include header.html root=page.root active=page.active %}
