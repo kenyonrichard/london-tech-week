@@ -6,3 +6,4 @@ author: "Richard Kenyon"
 exclude:
   - _source
   - _to_delete
+  - CLAUDE.md
